@@ -18,7 +18,7 @@ class AdminController{
                 $_SESSION['role'] = $role;
 
                 if ($role == 1) {
-                    header('Location: views/admin/dashboard.php');
+                    header('Location: /TLU_News/index.php?controller=Admin&action=dashboard');
                     exit();
                 } elseif ($role == 0) {
                     header('Location: /TLU_News/index.php?controller=Home&action=showListNew');
@@ -37,7 +37,7 @@ class AdminController{
         if (isset($_GET['action']) && $_GET['action'] =='logout') {
             session_unset();
             session_destroy();
-            $this->login();
+            header ('Location: /TLU_News/index.php?controller=Admin&action=login');
             exit();
         }
     }

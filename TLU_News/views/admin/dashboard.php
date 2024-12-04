@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 1) {
     header('Location: ../../index.php?controller=Admin&action=logout');
     exit();
@@ -37,7 +35,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 1) {
                     <a class="nav-link" href="/TLU_News/index.php?controller=News&action=index">Tin tức</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../index.php?controller=Admin&action=logout">Đăng xuất</a>
+                    <a class="nav-link" href="/TLU_News/index.php?controller=Admin&action=logout">Đăng xuất</a>
                 </li>
             </ul>
         </div>
