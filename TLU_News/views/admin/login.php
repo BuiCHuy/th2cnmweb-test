@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +8,7 @@
 </head>
 <body>
 <div class="container mt-5">
-    <h1>Đăng nhập cho quản trị viên</h1>
+    <h1>Đăng nhập</h1>
     <form action="" method="POST">
         <div class="mb-3">
             <label for="username" class="form-label">Tên đăng nhập:</label>

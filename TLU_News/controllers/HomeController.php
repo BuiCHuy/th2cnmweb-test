@@ -17,7 +17,7 @@ class HomeController{
 
         require 'views/home/index.php'; // goi den views
         if($_SESSION['role']==0){
-            echo "<a href='../index.php?controller=Admin&action=logout' class='btn btn-success'>logout</a>";
+            echo "<a href='/TLU_News/index.php?controller=Admin&action=logout' class='btn btn-success'>logout</a>";
         }
     }
 }
