@@ -16,6 +16,9 @@ class HomeController{
         $list_news = $newser->getAllNews();
 
         require 'views/home/index.php'; // goi den views
+        if($_SESSION['role']==0){
+            echo "<a href='../index.php?controller=Admin&action=logout' class='btn btn-success'>logout</a>";
+        }
     }
 }
 ?>

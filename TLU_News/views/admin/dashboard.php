@@ -27,10 +27,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/TLU_News/index.php?controller=Home&action=showListNew">Trang chủ</a>
+                    <a class="nav-link" href="../../index.php?controller=Home&action=showListNew">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/TLU_News/index.php?controller=News&action=index">Tin tức</a>
+                    <a class="nav-link" href="../../index.php?controller=News&action=index">Tin tức</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Quản lý người dùng</a>
@@ -39,7 +39,7 @@
                     <a class="nav-link" href="#">Cài đặt</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/TLU_News/index.php?controller=Admin&action=logout";>Thoát</a>
+                    <a class="nav-link" href="../../index.php?controller=Admin&action=logout";>Thoát</a>
                 </li>
             </ul>
         </div>
@@ -83,7 +83,7 @@
     </div>
 
     <!-- Nút thêm tin tức mới -->
-    <a href="/TLU_News/index.php?controller=News&action=addNews" class="btn btn-success">Thêm Tin Tức Mới</a>
+    <a href="../../index.php?controller=News&action=addNews" class="btn btn-success">Thêm Tin Tức Mới</a>
 
 </div>
 

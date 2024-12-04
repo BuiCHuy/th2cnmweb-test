@@ -2,7 +2,7 @@
 class AdminController{
     function login(){
 
-        require 'views/admin/login.php';
+
 
         ob_start();
         require_once __DIR__ . '/../db.php';
@@ -13,17 +13,15 @@ class AdminController{
             $password = trim($_POST['password']);
 
             $role = checkUsers($username, $password, $conn);
-
-
-
-           if ($role) {
+           if (isset($role)) {
                 $_SESSION['role'] = $role;
-
+                $txt_error = $role;
                 if ($role == 1) {
                    header('Location: views/admin/dashboard.php');
                     exit();
                 } elseif ($role == 0) {
-                    header('Location: ../../views/home/index.php');
+
+                    header ('Location:/TLU_News/index.php?controller=Home&action=showListNew');
                     exit();
                 }
            } else {
@@ -31,14 +29,14 @@ class AdminController{
             }
         }
 
-
+        require 'views/admin/login.php';
     }
     function logout(){
 
         if (isset($_GET['action']) && $_GET['action'] =='logout') {
             session_unset();
             session_destroy();
-            $this->login();
+            header('Location: /TLU_News/index.php?controller=Admin&action=login');
             exit();
         }
     }

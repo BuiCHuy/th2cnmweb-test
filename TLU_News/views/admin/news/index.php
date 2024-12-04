@@ -13,6 +13,7 @@
 <div class="container">
     <h3>News Manager</h3>
     <a href="/TLU_News/index.php?controller=News&action=addNews" class="btn btn-success">Add News</a>
+    <a href=""></a>
     <table class="table">
         <thead>
         <tr>

@@ -10,7 +10,9 @@
 </head>
 <body>
 <h1 class="text-center">Tin tức TLU những ngày qua</h1>
+
 <div class="container">
+
     <div class="row">
         <div class="col-md-12">
             <div class="news_block p-3">
