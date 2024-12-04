@@ -35,6 +35,7 @@ if($_SESSION['role']==1){
             $homeController = new HomeController();
             $homeController->$action();
             break;
+
         default:
             header('Location: views/admin/login.php');
             break;
@@ -67,6 +68,11 @@ if($_SESSION['role']==0){
             require 'controllers/AdminController.php';
             $adminController = new AdminController();
             $adminController->$action();
+        case 'search':
+            require 'controllers/HomeController.php';
+            $homeController = new HomeController();
+            $homeController->showListNewsSearched($_POST['search']);
+            break;
         Default :
             echo "error";
     }

@@ -13,6 +13,12 @@
 
 <div class="container">
 
+    <a href='/TLU_News/index.php?controller=Admin&action=logout' class='btn btn-success'>logout</a>
+
+    <form action="index.php?controller=search" class="ps-5 pt-5" method="post">
+        <input type="text" name="search" value="<?= $tukhoa?>">
+        <button type="submit"> Tìm kiếm</button>
+    </form>
     <div class="row">
         <div class="col-md-12">
             <div class="news_block p-3">
@@ -39,6 +45,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
