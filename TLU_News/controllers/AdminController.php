@@ -1,6 +1,7 @@
 <?php
 class AdminController{
     function login(){
+
         require 'views/admin/login.php';
 
         ob_start();
@@ -14,18 +15,19 @@ class AdminController{
             $role = checkUsers($username, $password, $conn);
 
 
-            if ($role) {
+
+           if ($role) {
                 $_SESSION['role'] = $role;
-                echo 'jj';
+
                 if ($role == 1) {
-                    header('Location: views/admin/dashboard.php');
+                   header('Location: views/admin/dashboard.php');
                     exit();
                 } elseif ($role == 0) {
                     header('Location: ../../views/home/index.php');
                     exit();
                 }
-            } else {
-                $txt_error = "Tên đăng nhập hoặc mật khẩu không đúng.";
+           } else {
+               $txt_error = "Tên đăng nhập hoặc mật khẩu không đúng.";
             }
         }
 
@@ -39,9 +41,6 @@ class AdminController{
             $this->login();
             exit();
         }
-    }
-    function dashboard(){
-        header ('Location:views/admin/Dashboard.php');
     }
 }
 ?>

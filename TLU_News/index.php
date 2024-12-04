@@ -9,16 +9,12 @@ if (!isset($_SESSION['role'])) {
     exit();
 }
 
-    $controller = isset($_GET['controller']) ? $_GET['controller'] : 'default';
+
+    $controller = isset($_GET['controller']) ? $_GET['controller'] : 'Admin';
     $action = isset($_GET['action']) ? $_GET['action'] : 'index';
     $id = isset($_GET['index']) ? $_GET['index'] : null;
 
     switch ($controller) {
-        case 'default':
-            require 'controllers/AdminController.php';
-            $adminController = new AdminController();
-            $adminController->dashboard();
-            break;
         case 'News':
             require 'controllers/NewsController.php';
             $newsController = new NewsController();

@@ -1,6 +1,4 @@
-<?php
-require_once __DIR__ . '/../../controllers/AdminController.php';
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +11,7 @@ require_once __DIR__ . '/../../controllers/AdminController.php';
 <body>
 <div class="container mt-5">
     <h1>Đăng nhập cho quản trị viên</h1>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form action="" method="POST">
         <div class="mb-3">
             <label for="username" class="form-label">Tên đăng nhập:</label>
             <input type="text" class="form-control" name="username" placeholder="Nhập tên đăng nhập" required>
